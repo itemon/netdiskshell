@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta content="网盘,百度网盘,百度云,网络U盘,网络硬盘,免费网盘,网盘下载,网盘资源,同步,云存储,外链分享,离线下载" name="keywords"/>
+<meta content="百度网盘为您提供文件的网络备份、同步和分享服务。空间大、速度快、安全稳固，支持教育网加速，支持手机端。现在注册即有机会享受15G的免费存储空间" name="description"/>		
+<title>百度云 实验室</title>
+<link rel="stylesheet" href="/res/static/css/import/yun_home_all.css?t=201301175055" />
+<link rel="shortcut icon" href="/res/static/images/favicon.ico" />
+<script type="text/javascript" src="/res/static/js/import/yun_home_speed_all.js?t=201303212934"></script>
+<!--[if lt IE 9]><script type="text/javascript" src="/res/static/js/plug/html5.js"></script><![endif]-->
+</head>
+
+<body>
+<!--[if IE]><iframe id="historyIFrameEmulator" style="display: none"></iframe><![endif]-->
+<div class="doc">
+  <div class="doc-inner">
+    <div class="doc-triple">
+      <header id="header" class="hd-main b-rlv clearfix">
+      		<c:var name="from_share" value="-1"/>
+			<c:var name="flag" value="-1" />
+			<f:include path="../common/black_header_third.html"/>
+		</header>
+      <section class="bd b-rlv clearfix">
+        <section class="main clearfix">
+            <h1>Labs</h1>
+        </section>
+        <section class="tail" id="tail">
+		</section>
+      </section>
+      <footer class="ft"> </footer>
+    </div>
+  </div>
+</div>
+<f:include path="./tongji_sub.html"/>
+
+<script type="text/javascript">
+/*<![CDATA[*/
+var config = {
+	mods: [
+		'NAVS', 'AD', 'PERSONAL_INFO', 'NOTICE', 'DOWNLOAD', 'MORE'
+	],
+	navCurrent: '网盘',
+	vip: ${is_vip},
+    nickName: "${username}",
+    isLogin: ${loginstate}	
+};
+var header = new yunHeader.Header(config);
+$('div[node-type~="module-header-wrapper"]').html('').append(header.$el);
+/*]]>*/
+</script>
+</body>
+</html>

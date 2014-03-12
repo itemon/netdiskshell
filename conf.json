@@ -1,0 +1,33 @@
+{
+	"boot_script" : "./debugger.php",
+	"local_port" : 8080,
+	"enable_rnd_api_drop" : false,
+	"code_tpl_base" : "\\templates\\",
+	"code_base" : "D:\\workshop\\2014-1-17",
+	"log" : {
+		"err" : "./datastore"
+	},
+	"app" : {
+		"page" : {
+			"/disk/home" : ["disk/", "yun_home.html", "./datastore/home.json"],
+			"/disk/history" : ["disk/", "yun_history.html"],
+			"/disk/supersede" : ["disk/", "supersede.html"],
+			"/disk/lab" : ["disk/", "lab.html", "./datastore/lab.json"]
+		},
+		"api" : {
+			"/api/list" : ["", "", ""],
+			"/api/delete" : ["", "", ""],
+			"/api/categorylist" : ["", "", ""],
+			"/api/search" : ["", "", ""]
+		},
+		"remote_host" : "pan.baidu.com",
+		"static_rewrite_prefix" : "(res|ppres)",
+		"static_rewrite_rules" : [
+			{
+				"from" : "/ppres/static/thirdparty/header",
+				"to" : "D:\\workshop\\pui\\static\\thirdparty\\header",
+				"mode" : "switch"
+			}
+		]
+	}
+}
